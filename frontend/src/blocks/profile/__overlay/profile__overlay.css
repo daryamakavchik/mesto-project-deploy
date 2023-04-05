@@ -1,0 +1,13 @@
+.profile__overlay{
+    align-self: center;
+    height: 120px;
+    margin: 0 45px 0 0;
+    position: relative;
+    width: 120px;   
+}
+
+@media screen and (max-width: 762px) {
+    .profile__overlay {
+        margin: 42px auto 0;
+    }
+  }

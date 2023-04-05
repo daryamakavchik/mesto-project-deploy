@@ -1,0 +1,7 @@
+.popup-picture {
+    position: relative;
+    max-height: 75vh;
+    max-width: 75vw;
+    width: initial;
+    height: initial;
+}

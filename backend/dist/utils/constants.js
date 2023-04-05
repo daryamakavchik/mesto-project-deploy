@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.STATUS_11000 = exports.STATUS_409 = exports.STATUS_404 = exports.STATUS_403 = exports.STATUS_401 = exports.STATUS_400 = exports.STATUS_500 = void 0;
+exports.STATUS_500 = 500;
+exports.STATUS_400 = 400;
+exports.STATUS_401 = 401;
+exports.STATUS_403 = 403;
+exports.STATUS_404 = 404;
+exports.STATUS_409 = 409;
+exports.STATUS_11000 = 11000;

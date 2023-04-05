@@ -1,0 +1,25 @@
+.card__info {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  /* display: grid;
+  grid-template-columns: 235px 45px;
+  justify-content: space-between;
+  align-items: center; */
+
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 22px 15px 0px 21px; */
+    padding: 0;
+
+  border-radius: 0 0 10px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 762px) {
+  .card__info {
+      width: 282px;
+  }
+}

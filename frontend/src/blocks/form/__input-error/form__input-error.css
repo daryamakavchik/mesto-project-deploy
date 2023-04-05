@@ -1,0 +1,6 @@
+.form__input-error {
+  display: block;
+  opacity: 0;
+  min-height: 30px;
+  padding-top: 5px;
+  }

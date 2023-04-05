@@ -1,0 +1,9 @@
+.profile__text {
+  display: flex;
+}
+
+@media screen and (max-width: 762px) {
+  .profile__text {
+      margin: 0 auto;
+  }
+}

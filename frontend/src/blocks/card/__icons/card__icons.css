@@ -1,0 +1,6 @@
+.card__icons{
+    display: flex;
+    flex-direction: column;
+    height: 38px;
+    margin: 20px 15px 0px 0px;
+}
