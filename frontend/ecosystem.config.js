@@ -14,9 +14,9 @@ module.exports = {
       user: DEPLOY_USER,
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
-      repo: 'https://github.com/daryamakavchik/mesto-project-pair.git',
+      repo: 'https://github.com/daryamakavchik/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
       'post-deploy': 'npm i && npm run build',
     },
   },
-}; 
+};
