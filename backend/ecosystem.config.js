@@ -7,7 +7,7 @@ const {
 module.exports = {
   apps: [{
     name: 'api-mestoproject',
-    script: './src/app.ts',
+    script: './backend/src/app.ts',
   }],
 
   deploy: {
@@ -18,7 +18,7 @@ module.exports = {
       repo: 'git@github.com:daryamakavchik/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'npm i',
+      'post-deploy': 'cd backend && npm i',
     },
   },
 };
