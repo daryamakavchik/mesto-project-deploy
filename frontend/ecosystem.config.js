@@ -12,7 +12,6 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'git@github.com:daryamakavchik/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      'pre-deploy-local': "npm run deploy",
       'post-deploy': 'echo "lol"'
     },
   },
