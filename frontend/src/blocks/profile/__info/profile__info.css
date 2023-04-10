@@ -1,12 +1,16 @@
 .profile__info {
-  margin: 0 0 0 30px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "a t b"
+    "a s s"
+    "a . .";
 }
 
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 1024px) {
   .profile__info {
-      max-width: 300px;
+    grid-template-areas:
+      " a a "
+      " t b "
+      " s s";
   }
 }
