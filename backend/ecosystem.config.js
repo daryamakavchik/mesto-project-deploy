@@ -1,4 +1,4 @@
-require('dotenv').config({ path: __dirname + `./.env.deploy` });
+require('dotenv').config({ path: __dirname + `/.env.deploy` });
 
 const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF = 'origin/master',
