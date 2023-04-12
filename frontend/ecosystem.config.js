@@ -12,7 +12,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'git@github.com:daryamakavchik/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      'post-deploy': 'rm -rf node_modules && npm install && npm run build'
+      'post-deploy': 'rm -rf node_modules && npm cache clean && npm install && npm init && npm run build'
     },
   },
 };
