@@ -10,6 +10,9 @@ This is a single page responsive website using CSS, HTML and JavaScript,followin
 * Node JS;
 * Express;
 
+**Server IP** 
+84.201.141.185
+
 **Link to the project**
 https://mestoproject.students.nomoredomains.work/
 
