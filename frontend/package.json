@@ -7,14 +7,14 @@
     "build": "webpack --mode production",
     "dev": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "npm run build && scp -Cr ./dist/* daryamakauchyk@84.201.141.185:/home/daryamakauchyk/mesto-frontend"
+    "deploy": "npm run build && scp -Cr ./dist/* daryamakauchyk@84.201.141.185:/home/daryamakauchyk/mesto-frontend/source"
 
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yansadykov/mesto-project.git"
   },
-  "author": "sadykov nursultan",
+  "author": "makauchyk darya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yansadykov/mesto-project/issues"
