@@ -8,7 +8,6 @@
     "dev": "webpack serve",
     "predeploy": "npm run build",
     "deploy": "npm run build && scp -Cr ./dist/* daryamakauchyk@84.201.141.185:/home/daryamakauchyk/mesto-frontend"
-
   },
   "repository": {
     "type": "git",
