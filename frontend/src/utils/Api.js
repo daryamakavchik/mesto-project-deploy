@@ -62,11 +62,20 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://localhost:8080',
-  credentials: 'include',
+
+  baseUrl: "https://nomoreparties.co/v1/plus-cohort-8",
   headers: {
-    'Content-Type': 'application/json',
+      authorization: "837c0be1-5609-4c04-b384-491cd26df7eb",
+      "Content-Type": "application/json",
   },
+
+  // baseUrl: 'http://localhost:8080',
+  // credentials: 'include',
+  // headers: {
+  //   'Content-Type': 'application/json',
+  // },
+
+
 });
 
 export default api;
