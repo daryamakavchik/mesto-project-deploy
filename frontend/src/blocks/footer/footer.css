@@ -1,23 +1,10 @@
 .footer {
-  margin: 67px auto 60px;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  color: rgb(84, 84, 84);
-  max-width: 880px;
+  padding: 68px 0 60px;
+  margin-top: auto;
 }
 
-@media (min-width: 763px) and (max-width: 1274px) {
+@media screen and (max-width: 425px) {
   .footer {
-      max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 762px) {
-  .footer {
-      margin: 50px auto 36px 19px;
-      max-width: 320px;
-      font-size: 14px;
-      line-height: 17px;
+    padding: 48px 0 36px;
   }
 }
