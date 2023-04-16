@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.js'
+        template: './public/index.html'
       }),
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin(),
