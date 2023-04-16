@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Redirect, Route, Routes, useHistory } from 'react-router-dom';
+import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import api from '../utils/Api';
 import authApi from '../utils/AuthApi';
 import Header from './Header';
@@ -35,7 +35,7 @@ function App() {
     image: '',
     text: '',
   });
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -90,7 +90,7 @@ function App() {
           localStorage.setItem('jwt', res.token);
           setLoggedIn(true);
           setEmail(userData.email);
-          history.push('/');
+          navigate('/');
         }
       })
       .catch((err) => {
@@ -103,12 +103,12 @@ function App() {
       const jwt = localStorage.getItem('jwt');
       if (jwt) {
         setLoggedIn(true);
-        history.push('/');
+        navigate('/');
       }
     }
 
     checkToken();
-  }, [history]);
+  }, [navigate]);
 
   function handleSignUpSubmit(userData) {
     authApi
@@ -120,7 +120,7 @@ function App() {
             image: successImage,
             text: 'Вы успешно зарегистрировались!',
           });
-          history.push('/signin');
+          navigate('/signin');
         }
       })
       .catch((err) => {
@@ -138,7 +138,7 @@ function App() {
     .then((res) => {
       localStorage.removeItem('jwt');
       setLoggedIn(false);
-      history.push('/signin');
+      navigate('/signin');
     })
     .catch((err) => {
       console.log(err)
@@ -273,7 +273,7 @@ function App() {
             <Register onRegister={handleSignUpSubmit} />
           </Route>
           <Route>
-            {loggedIn ? <Redirect to="/" /> : <Redirect to="/signin" />}
+            {loggedIn ? <Navigate to="/" /> : <Navigate to="/signin" />}
           </Route>
           </Routes>
         {loggedIn && <Footer />}

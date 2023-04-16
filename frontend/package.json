@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "core-js": "^3.21.1",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.10.0",
     "web-vitals": "^3.3.1"
   },
   "browserslist": {

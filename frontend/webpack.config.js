@@ -45,8 +45,10 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './public/index.html'
       }),
+      new webpack.ProvidePlugin({
+        "React": "react",
+     }),
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin(),
-
     ]
   }
