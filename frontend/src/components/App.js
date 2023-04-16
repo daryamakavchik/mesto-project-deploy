@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import { Redirect, Route, Routes, useHistory } from 'react-router-dom';
 import api from '../utils/Api';
 import authApi from '../utils/AuthApi';
 import Header from './Header';
@@ -251,7 +251,7 @@ function App() {
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
         <Header userEmail={email} onSignOut={handleSignOutClick} />
-        <Switch>
+        <Routes>
           <ProtectedRoute
             exact
             path="/"
@@ -275,7 +275,7 @@ function App() {
           <Route>
             {loggedIn ? <Redirect to="/" /> : <Redirect to="/signin" />}
           </Route>
-        </Switch>
+          </Routes>
         {loggedIn && <Footer />}
         <AddPlacePopup
           isOpen={isAddCardPopupOpen}

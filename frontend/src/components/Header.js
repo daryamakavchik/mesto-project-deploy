@@ -1,5 +1,5 @@
 import logo from '../images/logo/logo.svg';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
 function Header({ onSignOut, userEmail }) {
@@ -25,7 +25,7 @@ function Header({ onSignOut, userEmail }) {
       </Route>
       <div className="header__container">
         <img className="logo" src={logo} alt="Логотип Mesto Russia" />
-        <Switch>
+        <Routes>
           <Route exact path="/">
             <div className="header__info-desktop">
               <p className="header__email">{userEmail}</p>
@@ -50,7 +50,7 @@ function Header({ onSignOut, userEmail }) {
               Регистрация
             </Link>
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </header>
   );
