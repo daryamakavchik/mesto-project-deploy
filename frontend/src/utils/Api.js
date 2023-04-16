@@ -62,7 +62,6 @@ class Api {
 }
 
 const api = new Api({
-
   baseUrl: "https://nomoreparties.co/v1/plus-cohort-8",
   credentials: 'include',
   headers: {
