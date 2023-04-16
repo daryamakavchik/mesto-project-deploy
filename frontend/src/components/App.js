@@ -94,6 +94,11 @@ function App() {
         }
       })
       .catch((err) => {
+        setIsInfoTooltipOpen(true);
+        setInfoContent({
+          image: errorImage,
+          text: 'Что-то пошло не так! Попробуйте еще раз.',
+        });
         console.log(err);
       });
   }
