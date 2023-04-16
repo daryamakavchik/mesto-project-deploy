@@ -90,7 +90,7 @@ function App() {
           localStorage.setItem('jwt', res.token);
           setLoggedIn(true);
           setEmail(userData.email);
-          navigate('/');
+          navigate('/', { replace: true });
         }
       })
       .catch((err) => {
@@ -103,7 +103,7 @@ function App() {
       const jwt = localStorage.getItem('jwt');
       if (jwt) {
         setLoggedIn(true);
-        navigate('/');
+        navigate('/', { replace: true });
       }
     }
 
@@ -120,7 +120,7 @@ function App() {
             image: successImage,
             text: 'Вы успешно зарегистрировались!',
           });
-          navigate('/signin');
+          navigate('/signin', { replace: true });
         }
       })
       .catch((err) => {
@@ -138,7 +138,7 @@ function App() {
     .then((res) => {
       localStorage.removeItem('jwt');
       setLoggedIn(false);
-      navigate('/signin');
+      navigate('/signin', { replace: true });
     })
     .catch((err) => {
       console.log(err)
@@ -252,9 +252,8 @@ function App() {
       <CurrentUserContext.Provider value={currentUser}>
         <Header userEmail={email} onSignOut={handleSignOutClick} />
         <Routes>
+          <Route exact path='/' element={
           <ProtectedRoute
-            exact
-            path="/"
             loggedIn={loggedIn}
             component={Main}
             onEditProfile={handleEditProfileClick}
@@ -266,14 +265,14 @@ function App() {
             onUpdateCards={handleUpdateCards}
             cards={cards}
           />
-          <Route path="/signin">
+          }></Route>
+          <Route path="/signin" element={
             <Login onLogin={handleSignInSubmit} />
+          }>
           </Route>
-          <Route path="/signup">
+          <Route path="/signup" element={
             <Register onRegister={handleSignUpSubmit} />
-          </Route>
-          <Route>
-            {loggedIn ? <Navigate to="/" /> : <Navigate to="/signin" />}
+          }>
           </Route>
           </Routes>
         {loggedIn && <Footer />}

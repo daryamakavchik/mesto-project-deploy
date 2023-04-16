@@ -33,14 +33,14 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss-loader": "^6.2.1",
-    "webpack": "^5.72.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
     "core-js": "^3.21.1",
     "react-router-dom": "^6.10.0",
-    "web-vitals": "^3.3.1"
+    "web-vitals": "^3.3.1",
+    "webpack": "^5.79.0"
   },
   "browserslist": {
     "production": [
