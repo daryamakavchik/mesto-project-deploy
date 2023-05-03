@@ -71,7 +71,7 @@ app.post('/signup', validateSignUp, createUser);
 app.use(auth);
 app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
-app.all('/*', (req, res) => res.status(404).json({ message: 'Страница не существует' }));
+app.all('/*', (req, res) => res.status(STATUS_404).json({ message: 'Страница не существует' }));
 app.use(errorLogger);
 app.use(errors());
 app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
