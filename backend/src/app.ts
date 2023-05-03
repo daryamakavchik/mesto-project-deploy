@@ -1,5 +1,4 @@
 import express, { NextFunction, Request, Response } from 'express';
-import cors from 'cors';
 import Joi = require('joi');
 import { celebrate } from 'celebrate';
 import mongoose from 'mongoose';
@@ -51,7 +50,6 @@ connectDb().catch((error) => console.error(error));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(cors);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
