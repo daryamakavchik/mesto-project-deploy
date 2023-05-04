@@ -63,7 +63,7 @@ app.use(limiter);
 app.use(helmet());
 app.use(requestLogger);
 
-app.use(cors());
+app.use(cors({ origin: 'https://mestoproject.students.nomoredomains.work'  }));
 
 app.get('/crash-test', () => {
   setTimeout(() => {
