@@ -64,6 +64,7 @@ class Api {
 const api = new Api({
   baseUrl: "https://nomoreparties.co/v1/plus-cohort-8",
   credentials: 'include',
+
   headers: {
       authorization: "837c0be1-5609-4c04-b384-491cd26df7eb",
       "Content-Type": "application/json",
