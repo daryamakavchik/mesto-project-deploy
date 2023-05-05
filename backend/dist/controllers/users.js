@@ -124,7 +124,7 @@ const login = (req, res, next) => {
     const { email, password } = req.body;
     return user_1.default.findUserByCredentials(email, password)
         .then((user) => {
-        const token = jsonwebtoken_1.default.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
+        const token = jsonwebtoken_1.default.sign({ _id: user._id }, constants_1.SECRET_KEY, { expiresIn: '7d' });
         res.send({ token });
     })
         .catch((err) => {

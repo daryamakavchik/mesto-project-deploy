@@ -16,7 +16,7 @@ exports.default = (req, res, next) => {
     const token = authorization.replace('Bearer ', '');
     let payload;
     try {
-        payload = jsonwebtoken_1.default.verify(token, 'some-secret-key');
+        payload = jsonwebtoken_1.default.verify(token, constants_1.SECRET_KEY);
     }
     catch (err) {
         return res

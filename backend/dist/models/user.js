@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
+const constants_1 = require("../utils/constants");
 const unauthorized_err_1 = __importDefault(require("../errors/unauthorized-err"));
 const bcrypt = require('bcrypt');
 const isEmailValidator = require('validator').isEmail;
@@ -23,6 +24,12 @@ const userSchema = new mongoose_1.default.Schema({
     avatar: {
         type: String,
         default: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+        validate: {
+            validator(value) {
+                return constants_1.linkRegex.test(value);
+            },
+            message: 'Невалидный URL',
+        },
     },
     email: {
         type: String,
