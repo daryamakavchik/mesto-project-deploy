@@ -14,12 +14,6 @@ const router = Router();
 
 router.get('/', getAllUsers);
 
-router.get('/:userId', celebrate({
-  params: Joi.object().keys({
-    userId: Joi.string().length(24).hex(),
-  }),
-}), findUserById);
-
 router.get('/me', getUserInfo);
 
 router.patch('/me', celebrate({
@@ -35,5 +29,11 @@ router.patch('/me/avatar', celebrate({
     avatar: Joi.string().pattern(new RegExp(`${linkRegex}`)),
   }),
 }), updateUserAvatar);
+
+router.get('/:userId', celebrate({
+  params: Joi.object().keys({
+    userId: Joi.string().length(24).hex(),
+  }),
+}), findUserById);
 
 export default router;
