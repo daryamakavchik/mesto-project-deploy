@@ -47,7 +47,7 @@ const authApi = new AuthApi({
   headers: {
     'Accept': 'application/json',
     "Content-Type": "application/json",
-    authorization: "Bearer " + localStorage.getItem("jwt"),
+    authorization: "Bearer " + localStorage.getItem('jwt'),
   },
 });
 
