@@ -12,9 +12,9 @@ import {
 
 const router = Router();
 
-router.get('/cards', getAllCards);
+router.get('/', getAllCards);
 
-router.post('/cards', celebrate({
+router.post('/', celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
     link: Joi.string().custom((value) => {
@@ -26,19 +26,19 @@ router.post('/cards', celebrate({
   }),
 }), createCard);
 
-router.delete('/cards/:cardId', celebrate({
+router.delete('/:cardId', celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().length(24).hex(),
   }),
 }), deleteCard);
 
-router.put('/cards/:cardId/likes', celebrate({
+router.put('/:cardId/likes', celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().length(24).hex(),
   }),
 }), likeCard);
 
-router.delete('/cards/:cardId/likes', celebrate({
+router.delete('/:cardId/likes', celebrate({
   params: Joi.object().keys({
     cardId: Joi.string().length(24).hex(),
   }),
