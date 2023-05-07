@@ -109,6 +109,7 @@ function App() {
       if (jwt) {
         setLoggedIn(true);
         navigate('/', { replace: true });
+        console.log(jwt)
       }
     }
 
