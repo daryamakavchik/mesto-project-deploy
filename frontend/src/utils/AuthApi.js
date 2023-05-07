@@ -45,7 +45,7 @@ const authApi = new AuthApi({
   baseUrl: "https://api.mestoproject.students.nomoredomains.work",
   credentials: 'include',
   headers: {
-      authorization: "837c0be1-5609-4c04-b384-491cd26df7eb",
+      //authorization: "837c0be1-5609-4c04-b384-491cd26df7eb",
       "Content-Type": "application/json",
   },
 });
