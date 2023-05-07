@@ -110,6 +110,8 @@ function App() {
       if (jwt) {
         setLoggedIn(true);
         navigate('/', { replace: true });
+      } else {
+        navigate('/signup', { replace: true });
       }
     }
 
