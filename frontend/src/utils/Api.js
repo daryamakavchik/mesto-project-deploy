@@ -62,7 +62,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://api.mestoproject.nomoredomains.work",
+  baseUrl: "https://api.mestoproject.students.nomoredomains.work",
   credentials: 'include',
 
   headers: {
