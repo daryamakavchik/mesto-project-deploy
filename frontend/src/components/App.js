@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import api from '../utils/Api';
 import authApi from '../utils/AuthApi';
 import Header from './Header';
@@ -106,10 +106,10 @@ function App() {
    useEffect(() => {
     function checkToken() {
       const jwt = localStorage.getItem('jwt');
+      console.log(jwt);
       if (jwt) {
         setLoggedIn(true);
         navigate('/', { replace: true });
-        console.log(jwt)
       }
     }
 
