@@ -64,10 +64,10 @@ class Api {
 const api = new Api({
   baseUrl: "https://api.mestoproject.students.nomoredomains.work",
   credentials: 'include',
-
   headers: {
-      //authorization: "837c0be1-5609-4c04-b384-491cd26df7eb",
-      "Content-Type": "application/json",
+    'Accept': 'application/json',
+    "Content-Type": "application/json",
+    authorization: "Bearer " + localStorage.getItem("jwt"),
   },
 });
 
