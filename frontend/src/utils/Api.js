@@ -53,7 +53,7 @@ class Api {
     const options = {
       method,
       credentials,
-      headers: _getHeaders()
+      headers: this._getHeaders()
     };
     if (body) {
       options.body = JSON.stringify(body);
