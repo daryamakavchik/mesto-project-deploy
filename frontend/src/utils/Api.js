@@ -1,6 +1,5 @@
 class Api {
-  constructor({ baseUrl, headers, credentials }) {
-    this._headers = headers;
+  constructor({ baseUrl, credentials }) {
     this._baseUrl = baseUrl;
     this._credentials = credentials;
   }
@@ -37,17 +36,24 @@ class Api {
     return this._sendRequest('/users/me/avatar', 'PATCH', newUserAvatar);
   }
 
+  _getHeaders() {
+    return {
+      'Accept': 'application/json',
+      'Content-Type': "application/json",
+      'Authorization': "Bearer " + localStorage.getItem('jwt'),
+    };
+  }
+
   _sendRequest(
     path,
     method,
     body,
-    headers = this._headers,
     credentials = this._credentials
   ) {
     const options = {
       method,
-      headers,
       credentials,
+      headers: _getHeaders()
     };
     if (body) {
       options.body = JSON.stringify(body);
@@ -63,12 +69,7 @@ class Api {
 
 const api = new Api({
   baseUrl: "https://api.mestoproject.students.nomoredomains.work",
-  credentials: 'include',
-  headers: {
-    'Accept': 'application/json',
-    "Content-Type": "application/json",
-    authorization: "Bearer " + localStorage.getItem('jwt'),
-  },
+  credentials: 'include'
 });
 
 export default api;
