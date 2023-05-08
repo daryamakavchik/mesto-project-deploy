@@ -40,7 +40,7 @@ function Main({
         ></button>
       </section>
       <section className="elements">
-        {/* {cards && cards.map((card) => (
+        {cards && cards.map((card) => (
           <Card
             card={card}
             key={card._id}
@@ -48,7 +48,7 @@ function Main({
             onCardDeleteButtonClick={onCardDeleteButtonClick}
             onCardLike={onCardLike}
           />
-        ))} */}
+        ))}
       </section>
     </main>
   );
