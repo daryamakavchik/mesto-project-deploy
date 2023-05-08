@@ -156,7 +156,7 @@ function App() {
       Promise.all([api.getUserData(), api.getCards()])
         .then(([userData, cards]) => {
           setCurrentUser(userData);
-          setCards(cards);
+          setCards(cards.data);
         })
         .catch((err) => {
           console.log(err);
