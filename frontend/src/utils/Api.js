@@ -17,7 +17,7 @@ class Api {
   }
 
   toggleCardLike(cardId, isLiked) {
-    if (isLiked) {
+    if (isLiked === false) {
       return this._sendRequest(`/cards/${cardId}/likes`, 'PUT');
     } else {
       return this._sendRequest(`/cards/${cardId}/likes`, 'DELETE');
