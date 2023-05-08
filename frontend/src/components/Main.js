@@ -40,7 +40,7 @@ function Main({
         ></button>
       </section>
       <section className="elements">
-        {cards.map((card) => (
+        {cards && cards.map((card) => (
           <Card
             card={card}
             key={card._id}
