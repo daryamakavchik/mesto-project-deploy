@@ -20,13 +20,13 @@ function Main({
           <div className="profile__overlay" onClick={onEditAvatar}></div>
           <img
             className="profile__image"
-            src={currentUser && currentUser.data.avatar}
+            src={currentUser && currentUser.data && currentUser.data.avatar}
             alt="Аватар пользователя"
           />
         </div>
         <div className="profile__info">
-          <h1 className="profile__name">{currentUser && currentUser.data.name}</h1>
-          <p className="profile__about">{currentUser && currentUser.data.about}</p>
+          <h1 className="profile__name">{currentUser && currentUser.data && currentUser.data.name}</h1>
+          <p className="profile__about">{currentUser && currentUser.data && currentUser.data.about}</p>
           <button
             className="button profile__button-edit"
             type="button"
