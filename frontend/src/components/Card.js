@@ -10,7 +10,9 @@ function Card({
   const currentUser = useContext(CurrentUserContext);
 
   const isOwn = card.owner === currentUser && currentUser.data && currentUser.data._id;
+  console.log(isOwn);
   const isLiked = card.likes.some((like) => like === currentUser && currentUser.data &&currentUser.data._id);
+  console.log(isLiked);
   const likeButtonClassName = (`button element__button-like ${
     isLiked ? 'element__button-like_active' : ''
   }`);
