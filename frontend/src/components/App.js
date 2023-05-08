@@ -60,7 +60,6 @@ function App() {
   }
 
   function handleUpdateCards(updatedCard) {
-    console.log(updatedCard)
     setCards((prevCardsState) =>
       prevCardsState.map((card) =>
         card._id === updatedCard._id ? updatedCard : card
@@ -218,6 +217,7 @@ function App() {
     api
       .toggleCardLike(card._id, isLiked)
       .then((likedCard) => {
+        console.log(likedCard)
         handleUpdateCards(likedCard);
       })
       .catch((err) => {
