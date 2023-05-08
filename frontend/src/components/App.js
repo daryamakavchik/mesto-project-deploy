@@ -215,7 +215,7 @@ function App() {
   function handleCardLike(card) {
     const isLiked = card.likes.some((like) => like === currentUser.data._id);
     api
-      .toggleCardLike(card._id, !isLiked)
+      .toggleCardLike(card._id, isLiked)
       .then((likedCard) => {
         handleUpdateCards(likedCard);
       })
