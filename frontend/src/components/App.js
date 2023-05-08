@@ -60,7 +60,7 @@ function App() {
   }
 
   function handleUpdateCards(updatedCard) {
-    console.log(prevCardsState)
+    console.log(updatedCard)
     setCards((prevCardsState) =>
       prevCardsState.map((card) =>
         card._id === updatedCard._id ? updatedCard : card
