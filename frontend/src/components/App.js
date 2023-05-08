@@ -253,6 +253,8 @@ function App() {
     };
   }, []);
 
+  console.log(currentUser);
+
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
