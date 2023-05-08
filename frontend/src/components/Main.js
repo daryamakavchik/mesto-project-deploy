@@ -13,8 +13,6 @@ function Main({
 }) {
   const currentUser = useContext(CurrentUserContext);
 
-  console.log(currentUser);
-
   return (
     <main className="content section page__section">
       <section className="profile">
@@ -22,13 +20,13 @@ function Main({
           <div className="profile__overlay" onClick={onEditAvatar}></div>
           <img
             className="profile__image"
-            src={currentUser.avatar}
+            src={currentUser && currentUser.data.avatar}
             alt="Аватар пользователя"
           />
         </div>
         <div className="profile__info">
-          <h1 className="profile__name">{currentUser.name}</h1>
-          <p className="profile__about">{currentUser.about}</p>
+          <h1 className="profile__name">{currentUser && currentUser.data.name}</h1>
+          <p className="profile__about">{currentUser && currentUser.data.about}</p>
           <button
             className="button profile__button-edit"
             type="button"
