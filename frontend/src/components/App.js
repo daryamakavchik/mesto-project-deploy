@@ -106,7 +106,7 @@ function App() {
    useEffect(() => {
     function checkToken() {
       const jwt = localStorage.getItem('jwt');
-      console.log(jwt);
+
       if (jwt) {
         setLoggedIn(true);
         navigate('/', { replace: true });
@@ -217,8 +217,7 @@ function App() {
     api
       .toggleCardLike(card._id, isLiked)
       .then((likedCard) => {
-        console.log(likedCard)
-        handleUpdateCards(likedCard);
+        handleUpdateCards(likedCard.data);
       })
       .catch((err) => {
         console.log(err);
@@ -253,8 +252,6 @@ function App() {
       document.removeEventListener('keydown', handleEscClose);
     };
   }, []);
-
-  console.log(currentUser);
 
   return (
     <div className="page">
