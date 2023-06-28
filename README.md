@@ -15,7 +15,7 @@ This work was aimed at learning deployment to a remote cloud server. For this, I
 
 What was done:
 * added authorization and registration page layout
-* connected backend for authorization and registration (from [mesto-backend](https://github.com/daryamakavchik/mesto-project-backend))
+* connected backend for authorization and registration (from [Backend part](https://github.com/daryamakavchik/mesto-project-backend))
 * added crash-test entrypoint
 * added .env files for frontend and backend
 * added pm2 deployment scenarios 
