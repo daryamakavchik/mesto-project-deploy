@@ -7,7 +7,8 @@
 
 
 ## Description 
-"Mesto Project Deploy" is a portfolio project created as an assignment for [Yandex.Practicum](https://practicum.yandex.com/web/ "Web Development Program"). [Frontend](https://github.com/daryamakavchik/mesto-project-pair) was implemented together with @yansadykov.
+"Mesto Project Deploy" is a portfolio project created as an assignment for [Yandex.Practicum](https://practicum.yandex.com/web/ "Web Development Program"). 
+[Frontend](https://github.com/daryamakavchik/mesto-project-pair) was implemented together with @yansadykov.
 
 This work was aimed at learning deployment to a remote cloud server. For this, I created a virtual machine and registered two domains (domain for frontend and subdomain for backend) at [domains.nomoreparties.site](domains.nomoreparties.site). 
 
