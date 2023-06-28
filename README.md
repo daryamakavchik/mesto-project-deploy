@@ -1,8 +1,8 @@
 # "Mesto Project (Deploy)" #
 
-[Deployed project link](https://mestoproject.students.nomoredomains.work/)
-[API link](https://api.mestoproject.students.nomoredomains.work/)
-**Server IP** 
+#### [Deployed project link](https://mestoproject.students.nomoredomains.work/)
+#### [API link](https://api.mestoproject.students.nomoredomains.work/)
+#### **Server IP** 
 84.201.141.185
 
 
