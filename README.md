@@ -11,15 +11,16 @@
 
 [Frontend part](https://github.com/daryamakavchik/mesto-project-pair) was implemented together with @yansadykov.
 
-This work was aimed at learning deployment to a remote cloud server. For this, I created a virtual machine and registered two domains (domain for frontend and subdomain for backend) at [domains.nomoreparties.site](domains.nomoreparties.site). 
+This work was aimed at learning deployment to a remote cloud server. For this, I created a remote server based on Linux ubuntu and registered two domains (domain for frontend and subdomain for backend) at [domains.nomoreparties.site](domains.nomoreparties.site). 
 
 What was done:
 * added authorization and registration page layout
 * connected backend for authorization and registration (from [Backend part](https://github.com/daryamakavchik/mesto-project-backend))
 * added crash-test entrypoint
 * added .env files for frontend and backend
-* added pm2 deployment scenarios 
-* registered SSL certificates
+* added pm2 deployment scenarios
+* set up Firewall and nginx
+* registered SSL certificates (available at both https and http)
 
 
 ## Tech Stack
@@ -32,6 +33,7 @@ What was done:
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![NGINX](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
 ## TO DO
 - [ ] make link workable (set up vm)
