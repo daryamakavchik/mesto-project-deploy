@@ -13,15 +13,14 @@
 
 This work was aimed at learning deployment to a remote cloud server. For this, I created a remote server based on Linux Ubuntu at [console.cloud.yandex.ru](https://console.cloud.yandex.ru/) and registered two domains (domain for frontend and subdomain for backend) at [domains.nomoreparties.site](domains.nomoreparties.site). 
 
-What was done:
-* added authorization and registration page layout
+What was also done:
+* authorization and registration page layout
 * connected backend for authorization and registration (from [Backend part](https://github.com/daryamakavchik/mesto-project-backend))
-* added crash-test entrypoint
-* added .env files for frontend and backend
-* added pm2 deployment scenarios
+* crash-test entrypoint
+* .env files for frontend and backend
+* pm2 deployment scenarios
 * set up Firewall and nginx
 * registered SSL certificates (available at both https and http)
-
 
 ## Tech Stack
 ![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
