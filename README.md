@@ -1,7 +1,7 @@
 # "Mesto Project (Deploy)" #
 
-![Deployed project link](https://mestoproject.students.nomoredomains.work/)
-![API link](https://api.mestoproject.students.nomoredomains.work/)
+[Deployed project link](https://mestoproject.students.nomoredomains.work/)
+[API link](https://api.mestoproject.students.nomoredomains.work/)
 **Server IP** 
 84.201.141.185
 
@@ -15,7 +15,7 @@ This work was aimed at learning deployment to a remote cloud server. For this, I
 
 What was added:
 * authorization and registration page
-* backend for authorization and registration (from ![mesto-backend](https://github.com/daryamakavchik/mesto-project-backend))
+* backend for authorization and registration (from [mesto-backend](https://github.com/daryamakavchik/mesto-project-backend))
 * crash-test entrypoint
 * .env files for frontend and backend
 * pm2 deployment scenarios 
