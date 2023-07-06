@@ -19,8 +19,8 @@ What was also done:
 * crash-test entrypoint
 * .env files for frontend and backend
 * pm2 deployment scenarios
-* set up Firewall and nginx
-* registered SSL certificates (available at both https and http)
+* Firewall and Nginx set up
+* SSL certificates (available at both https and http)
 
 ## Tech Stack
 ![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
