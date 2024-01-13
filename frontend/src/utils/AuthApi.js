@@ -42,7 +42,8 @@ class AuthApi {
 }
 
 const authApi = new AuthApi({
-  baseUrl: "https://api.mestoproject.students.nomoredomains.work",
+  //baseUrl: "https://api.mestoproject.students.nomoredomains.work",
+  baseUrl: "http://localhost:4000",
   credentials: 'include',
   headers: {
     'Accept': 'application/json',

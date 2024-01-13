@@ -1,0 +1,42 @@
+version: "3.3"
+services:
+
+  frontend:
+    container_name: mesto-project-frontend
+    image: daryamakauchyk/mesto-project-pair:latest
+    build: ./frontend
+    ports:
+      - 8081:80
+    restart: on-failure
+
+  backend:
+    container_name: mesto-project-backend
+    image: daryamakauchyk/mesto-project-backend:latest
+    build: ./backend
+    environment:
+      - LINK=mongodb://mongodb:27017/mestodb
+    volumes:
+      - .:/src
+    ports:
+      - 4000:3000
+    restart: on-failure
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
+    # volumes:
+    #   - dbdata6:/data/db
+
+  # database:
+  #   image: postgres:14
+  #   container_name: mestoproject
+  #   ports:
+  #     - 5432:5432
+  #   restart: on-failure
+    # volumes:
+    #   - /var/lib/docker/volumes/db-kupipodariday/_data
