@@ -68,8 +68,8 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "http://localhost:4000",
-  //baseUrl: "https://api.mestoproject.students.nomoredomains.work",
+  // baseUrl: "http://localhost:4000",
+  baseUrl: "https://apimestoproject.azurewebsites.net",
   credentials: 'include'
 });
 

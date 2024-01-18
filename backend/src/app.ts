@@ -66,7 +66,7 @@ app.use(requestLogger);
 app.use(cors({
   credentials: true,
   origin: [
-    'https://mestoproject.students.nomoredomains.work',
+    'https://mestoproject.azurewebsites.net',
     'http://localhost:8081'
   ]
 }));
