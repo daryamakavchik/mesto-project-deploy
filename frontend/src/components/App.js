@@ -120,7 +120,7 @@ function App() {
     authApi
       .signUpUser(userData)
       .then((res) => {
-        if (res.email) {
+        if (res.data.email) {
           setIsInfoTooltipOpen(true);
           setInfoContent({
             image: successImage,
@@ -131,24 +131,19 @@ function App() {
       })
       .catch((err) => {
         setIsInfoTooltipOpen(true);
+        console.log(userData);
         setInfoContent({
           image: errorImage,
           text: 'Что-то пошло не так! Попробуйте еще раз.',
         });
         console.log(err);
       });
-  }
+}
 
   function handleSignOutClick() {
-    authApi.signOutUser()
-    .then((res) => {
       localStorage.removeItem('jwt');
       setLoggedIn(false);
       navigate('/signin', { replace: true });
-    })
-    .catch((err) => {
-      console.log(err)
-    });
   }
 
   useEffect(() => {

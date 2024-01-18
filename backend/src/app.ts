@@ -89,9 +89,11 @@ app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
   res
     .status(statusCode)
     .send({
-      message: statusCode === STATUS_500
-        ? 'Произошла ошибка на сервере'
-        : message,
+      message:
+      // statusCode === STATUS_500
+      //   ? 'Произошла ошибка на сервере'
+        // :
+        message,
     });
 });
 

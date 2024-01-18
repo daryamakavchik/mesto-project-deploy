@@ -14,7 +14,8 @@ class AuthApi {
   }
 
   signOutUser() {
-    return this._sendRequest('/signout', 'GET', null);
+    return
+    // this._sendRequest('/signout', 'GET', null);
   }
 
   _sendRequest(

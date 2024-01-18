@@ -1,10 +1,10 @@
 .header__info-mobile {
-  visibility: hidden;
-  height: 0;
+  /* visibility: hidden;
+  height: 0; */
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   transition: all .5s ease-in;
 }
 

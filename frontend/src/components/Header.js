@@ -2,7 +2,7 @@ import logo from '../images/logo/logo.svg';
 import { Link, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
-function Header({ onSignOut, userEmail }) {
+function Header({ userEmail, onSignOut }) {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function toggleBurger() {
