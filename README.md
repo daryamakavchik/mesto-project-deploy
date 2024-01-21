@@ -33,4 +33,4 @@ What was also done:
 ![NGINX](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
 ## TO DO
-- [ ] make link workable (set up vm)
+- [x] make link workable (set up vm)
