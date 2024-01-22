@@ -73,7 +73,7 @@ app.use(cors({
 
 app.get('/crash-test', () => {
   setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
+    throw new Error('Server is about to fall :(');
   }, 0);
 });
 app.post('/signin', validateLogin, login);
@@ -81,7 +81,7 @@ app.post('/signup', validateSignUp, createUser);
 app.use(auth);
 app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
-app.all('/*', (req, res) => res.status(STATUS_404).json({ message: 'Страница не существует' }));
+app.all('/*', (req, res) => res.status(STATUS_404).json({ message: 'Page does not exist' }));
 app.use(errorLogger);
 app.use(errors());
 app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
@@ -91,7 +91,7 @@ app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
     .send({
       message:
       // statusCode === STATUS_500
-      //   ? 'Произошла ошибка на сервере'
+      //   ? 'Server error'
         // :
         message,
     });

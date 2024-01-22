@@ -22,13 +22,13 @@ const userSchema = new mongoose.Schema<IUser, UserModel>({
     type: String,
     minlength: 2,
     maxlength: 30,
-    default: 'Жак-Ив Кусто',
+    default: 'Jacques-Yves Cousteau',
   },
   about: {
     type: String,
     minlength: 2,
     maxlength: 30,
-    default: 'Исследователь',
+    default: 'Researcher',
   },
   avatar: {
     type: String,
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema<IUser, UserModel>({
       validator(value: string) {
         return linkRegex.test(value);
       },
-      message: 'Невалидный URL',
+      message: 'Invalid URL',
     },
   },
   email: {
@@ -45,7 +45,7 @@ const userSchema = new mongoose.Schema<IUser, UserModel>({
     required: true,
     validate: {
       validator: (v: string) => isEmailValidator(v),
-      message: 'Неправильный формат почты',
+      message: 'Invalid email format',
     },
     unique: true,
   },
@@ -60,11 +60,11 @@ const userSchema = new mongoose.Schema<IUser, UserModel>({
 userSchema.static('findUserByCredentials', function findUserByCredentials(email: string, password: string, next) {
   return this.findOne({ email }).select('+password').then((user: any) => {
     if (!user) {
-      return Promise.reject(new Error('Неправильные почта или пароль'));
+      return Promise.reject(new Error('Invalid username/password'));
     }
     return bcrypt.compare(password, user.password).then((matched: any) => {
       if (!matched) {
-        next(new UnauthorizedError('Передан неккоректный пароль'));
+        next(new UnauthorizedError('Invalid password'));
       }
       return user;
     });

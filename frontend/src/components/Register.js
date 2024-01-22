@@ -28,7 +28,7 @@ function Register({ onRegister }) {
 
   return (
     <section className="auth">
-        <h1 className="auth__title">Регистрация</h1>
+        <h1 className="auth__title">Sign up</h1>
         <form className="auth__form" onSubmit={handleSubmit}>
           <input
             onChange={handleEmailInput}

@@ -50,7 +50,7 @@ function AddPlacePopup({
   return (
     <PopupWithForm
       name="add-card"
-      title="Новое место"
+      title="New place"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}

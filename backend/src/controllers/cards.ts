@@ -9,7 +9,7 @@ import Card from '../models/card';
 export const getAllCards = (req: IRequest, res: Response): void => {
   Card.find({})
     .then((card) => res.send({ data: card }))
-    .catch(() => res.status(STATUS_500).send({ message: 'Произошла ошибка на сервере' }));
+    .catch(() => res.status(STATUS_500).send({ message: 'Server error' }));
 };
 
 export const createCard = (req: IRequest, res: Response, next: NextFunction): void => {
@@ -18,7 +18,7 @@ export const createCard = (req: IRequest, res: Response, next: NextFunction): vo
     .then((card) => res.send({ data: card }))
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError(' Переданы некорректные данные при создании карточки'));
+        next(new BadRequestError('Invalid data to create card'));
       }
       next(err);
     });
@@ -28,19 +28,19 @@ export const deleteCard = (req: IRequest, res: Response, next: NextFunction): vo
   const owner = req.user!._id;
   Card.findByIdAndRemove(req.params.cardId)
     .orFail(() => {
-      throw next(new NotFoundError('Передан несуществующий id карточки'));
+      throw next(new NotFoundError('Card with given id does not exist'));
     })
     .then((card) => {
       if (String(card.owner) === owner) {
         card.remove();
-        res.send({ message: 'Карточка успешно удалена' });
+        res.send({ message: 'Card deleted successfully' });
       } else {
-        throw next(new ForbiddenAccessError('Карточки других пользователей не могут быть удалены'));
+        throw next(new ForbiddenAccessError(`Other users' cards cannot be deleted`));
       }
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные'));
+        next(new BadRequestError('Invalid data'));
       }
       next(err);
     });
@@ -53,14 +53,14 @@ export const likeCard = (req: IRequest, res: Response, next: NextFunction): void
     { new: true },
   )
     .orFail(() => {
-      throw next(new NotFoundError('Передан несуществующий id карточки'));
+      throw next(new NotFoundError('Card with given id does not exist'));
     })
     .then((card) => {
       res.send({ data: card });
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные'));
+        next(new BadRequestError('Invalid data'));
       }
       next(err);
     });
@@ -73,14 +73,14 @@ export const dislikeCard = (req: IRequest, res: Response, next: NextFunction): v
     { new: true },
   )
     .orFail(() => {
-      throw next(new NotFoundError('Передан несуществующий id карточки'));
+      throw next(new NotFoundError('Card with given id does not exist'));
     })
     .then((card) => {
       res.send({ data: card });
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные'));
+        next(new BadRequestError('Invalid data'));
       }
       next(err);
     });

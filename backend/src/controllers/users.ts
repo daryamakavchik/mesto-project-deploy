@@ -17,7 +17,7 @@ interface IError extends Error {
 export const getAllUsers = (req: Request, res: Response): void => {
   User.find({})
     .then((user) => res.send({ data: user }))
-    .catch(() => res.status(STATUS_500).send({ message: 'Произошла ошибка на сервере' }));
+    .catch(() => res.status(STATUS_500).send({ message: 'Server error' }));
 };
 
 export const createUser = (req: IRequest, res: Response, next: NextFunction): void => {
@@ -31,10 +31,10 @@ export const createUser = (req: IRequest, res: Response, next: NextFunction): vo
     .then((user: IUser) => res.send({ data: user }))
     .catch((err: IError) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные при создании пользователя'));
+        next(new BadRequestError('Invalid data to create user'));
       }
       if (err.name === 'ConflictError' || err.statusCode === STATUS_11000) {
-        throw next(new ConflictError('Пользователь с таким email уже существует'));
+        throw next(new ConflictError('User with given email already exists'));
       }
       next(err);
     });
@@ -43,14 +43,14 @@ export const createUser = (req: IRequest, res: Response, next: NextFunction): vo
 export const findUserById = (req: Request, res: Response, next: NextFunction): void => {
   User.findById(req.params.userId)
     .orFail(() => {
-      throw next(new NotFoundError('Пользователь по указанному id не найден'));
+      throw next(new NotFoundError('User with given id not found'));
     })
     .then((user) => {
       res.send({ data: user });
     })
     .catch((err) => {
       if (err.kind === 'ObjectId') {
-        next(new BadRequestError('Неверный формат id'));
+        next(new BadRequestError('Invalid id format'));
       } else {
         next(err);
       }
@@ -60,12 +60,12 @@ export const findUserById = (req: Request, res: Response, next: NextFunction): v
 export const getUserInfo = (req: IRequest, res: Response, next: NextFunction): void => {
   User.findById(req.user!._id)
     .orFail(() => {
-      throw next(new NotFoundError('Пользователь по указанному id не найден'));
+      throw next(new NotFoundError('User with given id not found'));
     })
     .then((user) => res.send({ data: user }))
     .catch((err) => {
       if (err.kind === 'ObjectId') {
-        next(new BadRequestError('Неверный формат id'));
+        next(new BadRequestError('Invalid id format'));
       }
       next(err);
     });
@@ -83,7 +83,7 @@ export const updateUserInfo = (req: IRequest, res: Response, next: NextFunction)
     },
   )
     .orFail(() => {
-      throw next(new NotFoundError('Пользователь по указанному id не найден'));
+      throw next(new NotFoundError('User with given id not found'));
     })
     .then((user) => {
       if (user !== null) {
@@ -92,7 +92,7 @@ export const updateUserInfo = (req: IRequest, res: Response, next: NextFunction)
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные при обновлении профиля'));
+        next(new BadRequestError('Invalid data to edit profile'));
       } else {
         next(err);
       }
@@ -111,7 +111,7 @@ export const updateUserAvatar = (req: IRequest, res: Response, next: NextFunctio
     },
   )
     .orFail(() => {
-      throw next(new NotFoundError('Пользователь по заданному id не найден'));
+      throw next(new NotFoundError('User with given id not found'));
     })
     .then((user) => {
       if (user !== null) {
@@ -120,7 +120,7 @@ export const updateUserAvatar = (req: IRequest, res: Response, next: NextFunctio
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Переданы некорректные данные при обновлении аватара'));
+        next(new BadRequestError('Invalid data to edit avatar'));
       } else {
         next(err);
       }
@@ -140,9 +140,9 @@ export const login = (req: IRequest, res: Response, next: NextFunction) => {
     })
     .catch((err) => {
       if (err.name === 'BadRequestError') {
-        next(new BadRequestError('Оба поля должны быть заполнены'));
+        next(new BadRequestError('Both fields must be filled in'));
       } else {
-        next(new UnauthorizedError('Передан неккоректный email'));
+        next(new UnauthorizedError('Invalid email'));
       }
       next(err);
     });

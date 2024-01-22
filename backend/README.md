@@ -1,6 +1,6 @@
-# Бэкенд Mesto. Каркас API Mesto
+# Mesto Project Backend. Mesto API Blueprint
 
-## Используемые технологии и решения
-- Typescript в качестве основного языка проекта
-- Mongodb и ODM Mongoose для хранения данных пользователей
-- Node.js в качестве среды выполнения
+## Solutions and technologies used
+- Typescript as main project language
+- Mongodb and ODM Mongoose to store users' data
+- Node.js as runtime environment

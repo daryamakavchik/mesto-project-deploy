@@ -53,7 +53,7 @@ export const editProfileFormElements = (
     />
     <span className="popup__error about-input-error"></span>
     <button className="button popup__button-submit" type="submit">
-      Сохранить
+      Save
     </button>
   </>
 );

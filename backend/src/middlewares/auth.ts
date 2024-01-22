@@ -12,7 +12,7 @@ export default (req: SessionRequest, res: Response, next: NextFunction) => {
   if (!authorization || !authorization.startsWith('Bearer ')) {
     return res
       .status(401)
-      .send({ message: 'Необходима авторизация' });
+      .send({ message: 'Authorization needed' });
   }
 
   const token = authorization.replace('Bearer ', '');
@@ -23,7 +23,7 @@ export default (req: SessionRequest, res: Response, next: NextFunction) => {
   } catch (err) {
     return res
       .status(STATUS_401)
-      .send({ message: 'Необходима авторизация' });
+      .send({ message: 'Authorization needed' });
   }
 
   req.user = payload;

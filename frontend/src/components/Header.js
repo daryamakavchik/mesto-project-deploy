@@ -30,7 +30,7 @@ function Header({ userEmail, onSignOut }) {
         ></Route>
 
         {/* <div className="header__container">
-        <img className="logo" src={logo} alt="Логотип Mesto Russia" /> */}
+        <img className="logo" src={logo} alt="Logo Mesto Russia" /> */}
 
         <Route
           exact

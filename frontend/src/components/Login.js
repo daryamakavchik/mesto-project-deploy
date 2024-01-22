@@ -27,7 +27,7 @@ function Login({ onLogin }) {
 
   return (
     <section className="auth">
-        <h1 className="auth__title">Вход</h1>
+        <h1 className="auth__title">Sign in</h1>
         <form className="auth__form" onSubmit={handleSubmit}>
           <input
             onChange={handleEmailInput}
@@ -50,7 +50,7 @@ function Login({ onLogin }) {
             required
           ></input>
           <button className="button auth__button-submit" type="submit">
-            Войти
+            Log in
           </button>
         </form>
     </section>

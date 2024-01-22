@@ -30,6 +30,6 @@ const cardSchema = new mongoose.Schema({
 cardSchema.path('link').validate((val) => {
   const urlRegex = linkRegex;
   return urlRegex.test(val);
-}, 'Некорректный URL.');
+}, 'Invalid URL.');
 
 export default mongoose.model('card', cardSchema);
