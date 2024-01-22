@@ -19,7 +19,7 @@ function InfoTooltip({ onClose, isOpen, infoContent }) {
         <img
           className="popup__image"
           src={infoContent.image}
-          alt="Статус регистрации"
+          alt="Signup status"
         />
         <p className="popup__text">{infoContent.text}</p>
       </div>

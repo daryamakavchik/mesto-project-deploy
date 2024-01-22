@@ -43,7 +43,7 @@ function Login({ onLogin }) {
             onChange={handlePasswordInput}
             className="auth__input"
             name="password"
-            placeholder="Пароль"
+            placeholder="Password"
             autoComplete="off"
             type="password"
             value={password}

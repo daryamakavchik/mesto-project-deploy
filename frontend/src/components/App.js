@@ -97,7 +97,7 @@ function App() {
         setIsInfoTooltipOpen(true);
         setInfoContent({
           image: errorImage,
-          text: 'Что-то пошло не так! Попробуйте еще раз.',
+          text: 'Something went wrong! Please try again',
         });
         console.log(err);
       });
@@ -124,7 +124,7 @@ function App() {
           setIsInfoTooltipOpen(true);
           setInfoContent({
             image: successImage,
-            text: 'Вы успешно зарегистрировались!',
+            text: 'You have successfully signed up',
           });
           navigate('/signin', { replace: true });
         }
@@ -134,7 +134,7 @@ function App() {
         console.log(userData);
         setInfoContent({
           image: errorImage,
-          text: 'Что-то пошло не так! Попробуйте еще раз.',
+          text: 'Something went wrong! Please try again',
         });
         console.log(err);
       });

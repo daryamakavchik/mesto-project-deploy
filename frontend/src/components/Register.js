@@ -44,20 +44,20 @@ function Register({ onRegister }) {
             onChange={handlePasswordInput}
             className="auth__input"
             name="password"
-            placeholder="Пароль"
+            placeholder="Password"
             autoComplete="off"
             type="password"
             value={password}
             required
           ></input>
           <button className="button auth__button-submit" type="submit">
-            Зарегистрироваться
+            Sign up
           </button>
           <div className="auth__container">
             <p className="auth__question">
-              Уже зарегистрированы?&nbsp;
+              Already registered?&nbsp;
               <Link to="/signin" className="auth__link">
-                Войти
+                Sign in
               </Link>
             </p>
           </div>

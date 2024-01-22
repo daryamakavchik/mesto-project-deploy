@@ -33,13 +33,13 @@ function EditAvatarPopup({
   return (
     <PopupWithForm
       name="edit-profile"
-      title="Обновить аватар"
+      title="New avatar"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
       isLoading={isLoading}
-      buttonText="Сохранить"
-      buttonLoadingText="Сохранение..."
+      buttonText="Save"
+      buttonLoadingText="Saving..."
       isButtonDisabled={!isAvatarValid}
     >
       <input
@@ -49,7 +49,7 @@ function EditAvatarPopup({
         }`}
         type="url"
         name="avatar"
-        placeholder="Ссылка на картинку"
+        placeholder="Image link"
         required
         ref={avatarRef}
         onChange={handleLinkInput}

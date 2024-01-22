@@ -23,7 +23,7 @@ function Header({ userEmail, onSignOut }) {
             >
               <p className="header__email">{userEmail}</p>
               <button className="button header__button" onClick={onSignOut}>
-                Выход
+                Exit
               </button>
             </div>
           }
@@ -40,7 +40,7 @@ function Header({ userEmail, onSignOut }) {
               <div className="header__info-desktop">
                 <p className="header__email">{userEmail}</p>
                 <button className="button header__button" onClick={onSignOut}>
-                  Выйти
+                  Exit
                 </button>
               </div>
               <div
@@ -57,7 +57,7 @@ function Header({ userEmail, onSignOut }) {
           path="/signup"
           element={
             <Link className="header__link" to="/signin">
-              Войти
+              Sign in
             </Link>
           }
         ></Route>
@@ -66,7 +66,7 @@ function Header({ userEmail, onSignOut }) {
           path="/signin"
           element={
             <Link className="header__link" to="/signup">
-              Регистрация
+              Sign up
             </Link>
           }
         ></Route>

@@ -21,7 +21,7 @@ function Main({
           <img
             className="profile__image"
             src={currentUser && currentUser.data && currentUser.data.avatar}
-            alt="Аватар пользователя"
+            alt="User avatar"
           />
         </div>
         <div className="profile__info">

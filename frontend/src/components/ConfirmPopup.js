@@ -14,13 +14,13 @@ function ConfirmPopup({
   return (
     <PopupWithForm
       name="confirm"
-      title="Вы уверены?"
+      title="Are you sure?"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
       isLoading={isLoading}
-      buttonText="Да"
-      buttonLoadingText ="Удаление..."
+      buttonText="Yes"
+      buttonLoadingText ="Deleting..."
       isButtonDisabled={false}
     />
   );

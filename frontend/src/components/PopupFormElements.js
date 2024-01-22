@@ -7,7 +7,7 @@ export const addPlaceFormElements = (
       className="popup__input popup__input_type_picture-name"
       type="text"
       name="name"
-      placeholder="Название"
+      placeholder="Name"
       required
       minLength="2"
       maxLength="30"
@@ -18,7 +18,7 @@ export const addPlaceFormElements = (
       className="popup__input popup__input_type_link"
       type="url"
       name="link"
-      placeholder="Ссылка на картинку"
+      placeholder="Image link"
       required
     />
     <span className="popup__error link-input-error"></span>
@@ -35,7 +35,7 @@ export const editProfileFormElements = (
       className="popup__input popup__input_type_name"
       type="text"
       name="name"
-      placeholder="Имя"
+      placeholder="Name"
       required
       minLength="2"
       maxLength="40"
@@ -46,7 +46,7 @@ export const editProfileFormElements = (
       className="popup__input popup__input_type_about"
       type="text"
       name="about"
-      placeholder="О себе"
+      placeholder="About"
       required
       minLength="2"
       maxLength="200"
@@ -65,18 +65,18 @@ export const editAvatarFormElements = (
       className="popup__input popup__input_type_avatar"
       type="url"
       name="avatar"
-      placeholder="Ссылка на картинку"
+      placeholder="Image link"
       required
     />
     <span className="popup__error avatar-input-error"></span>
     <button className="button popup__button-submit" type="submit">
-      Сохранить
+      Save
     </button>
   </>
 );
 
 export const confirmFormElements = (
   <button className="button popup__button-submit" type="submit">
-    Да
+    Yes
   </button>
 );
