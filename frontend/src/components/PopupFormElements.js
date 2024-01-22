@@ -23,7 +23,7 @@ export const addPlaceFormElements = (
     />
     <span className="popup__error link-input-error"></span>
     <button className="button popup__button-submit" type="submit">
-      Создать
+      Create
     </button>
   </>
 );

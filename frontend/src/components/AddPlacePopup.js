@@ -55,8 +55,8 @@ function AddPlacePopup({
       onClose={onClose}
       onSubmit={handleSubmit}
       isLoading={isLoading}
-      buttonText="Создать"
-      buttonLoadingText="Создание..."
+      buttonText="Create"
+      buttonLoadingText="Creating..."
       isButtonDisabled={!(isNameValid && isLinkValid)}
     >
       <input
@@ -66,7 +66,7 @@ function AddPlacePopup({
         }`}
         type="text"
         name="name"
-        placeholder="Название"
+        placeholder="Name"
         required
         minLength="2"
         maxLength="30"
@@ -85,7 +85,7 @@ function AddPlacePopup({
         }`}
         type="url"
         name="link"
-        placeholder="Ссылка на картинку"
+        placeholder="Image link"
         required
         onChange={handleLinkInput}
         value={link}
