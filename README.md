@@ -2,8 +2,6 @@
 
 #### [Deployed project link](https://mestoproject.azurewebsites.net/)
 #### [API link](https://apimestoproject.azurewebsites.net/)
-#### **Server IP** 
-84.201.141.185
 
 
 ## Description 
@@ -11,7 +9,7 @@
 
 [Frontend part](https://github.com/daryamakavchik/mesto-project-pair) was implemented together with @yansadykov.
 
-This work was aimed at learning deployment to a remote cloud server. For this, I created a remote server based on Linux Ubuntu at [console.cloud.yandex.ru](https://console.cloud.yandex.ru/) and registered two domains (domain for frontend and subdomain for backend) at [domains.nomoreparties.site](domains.nomoreparties.site). 
+This work was aimed at learning deployment to a remote cloud server.
 
 What was also done:
 * authorization and registration page layout
@@ -35,4 +33,4 @@ What was also done:
 ![NGINX](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
 ## TO DO
-- [ ] make link workable (set up vm)
+- [x] make link workable (set up vm)
